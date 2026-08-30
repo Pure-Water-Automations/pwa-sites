@@ -1,3 +1,4 @@
+document.documentElement.classList.add('js'); // no-JS reveal gate: CSS scopes .reveal hiding under html.js
 // Shared site JS: mobile nav toggle, lead form submit, scroll reveal.
 (function () {
   // Mobile nav

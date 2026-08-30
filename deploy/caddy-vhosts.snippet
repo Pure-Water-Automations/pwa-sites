@@ -1,0 +1,14 @@
+# pwa-sites production vhosts — append to /etc/caddy/Caddyfile, then: systemctl reload caddy
+# Node (server.js) intentionally does not compress or set HSTS; Caddy owns both.
+
+ministry.purewaterautomations.com {
+	encode zstd gzip
+	header Strict-Transport-Security "max-age=31536000"
+	reverse_proxy 127.0.0.1:8811
+}
+
+nonprofits.purewaterautomations.com {
+	encode zstd gzip
+	header Strict-Transport-Security "max-age=31536000"
+	reverse_proxy 127.0.0.1:8811
+}

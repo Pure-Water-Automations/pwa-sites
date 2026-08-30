@@ -28,6 +28,19 @@ db.exec(`CREATE TABLE IF NOT EXISTS leads (
   page TEXT,
   user_agent TEXT
 )`);
+db.exec(`CREATE TABLE IF NOT EXISTS cta_clicks (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  created_at TEXT NOT NULL DEFAULT (datetime('now')),
+  target TEXT NOT NULL,
+  audience TEXT,
+  referer TEXT
+)`);
+
+// CTA outbound redirects, hit-counted in cta_clicks.
+const GO = {
+  '/go/discover': 'https://team.purewaterautomations.com/discover',
+  '/go/quiz': 'https://purewaterautomations.getformly.app/tcndHU',
+};
 
 const HOSTS = {
   'ministry.purewaterautomations.com': 'ministry',
@@ -55,16 +68,22 @@ function send(res, code, body, headers = {}) {
   res.end(body);
 }
 
-function serveFile(res, filePath) {
+function serveFile(req, res, filePath) {
   fs.stat(filePath, (err, st) => {
     if (err || !st.isFile()) return send(res, 404, 'Not found', { 'Content-Type': 'text/plain' });
     const ext = path.extname(filePath).toLowerCase();
-    const cache = ext === '.html' ? 'no-cache' : 'public, max-age=86400';
-    res.writeHead(200, {
+    // html/css/js revalidate every request (304 via Last-Modified); images/fonts cache a day
+    const cache = ['.html', '.css', '.js'].includes(ext) ? 'no-cache' : 'public, max-age=86400';
+    const lastMod = st.mtime.toUTCString();
+    const headers = {
       'Content-Type': MIME[ext] || 'application/octet-stream',
       'Cache-Control': cache,
+      'Last-Modified': lastMod,
       'X-Content-Type-Options': 'nosniff',
-    });
+    };
+    const ims = Date.parse(req.headers['if-modified-since'] || '');
+    if (ims && Math.floor(st.mtimeMs / 1000) * 1000 <= ims) return send(res, 304, '', headers);
+    res.writeHead(200, headers);
     fs.createReadStream(filePath).pipe(res);
   });
 }
@@ -136,15 +155,17 @@ function handleLead(req, res, audience) {
 }
 
 const server = http.createServer((req, res) => {
+  res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
   const host = (req.headers.host || '').split(':')[0].toLowerCase();
   let site = HOSTS[host] || null;
+  let prefix = ''; // '/ministry' | '/nonprofit' in local-dev prefix mode
   let urlPath;
   try { urlPath = decodeURIComponent(new URL(req.url, 'http://x').pathname); } catch { return send(res, 400, 'Bad request'); }
 
   // Local-dev prefix routing when host is not a known vhost.
   if (!site) {
     const m = urlPath.match(/^\/(ministry|nonprofit)(\/.*)?$/);
-    if (m) { site = m[1]; urlPath = m[2] || '/'; }
+    if (m) { site = m[1]; prefix = `/${m[1]}`; urlPath = m[2] || '/'; }
   }
 
   if (req.method === 'POST' && urlPath === '/api/lead') {
@@ -153,20 +174,42 @@ const server = http.createServer((req, res) => {
   if (urlPath === '/healthz') return send(res, 200, 'ok', { 'Content-Type': 'text/plain' });
   if (req.method !== 'GET' && req.method !== 'HEAD') return send(res, 405, 'Method not allowed');
 
+  // CTA counters: /go/<target> -> 302 outbound, one row in cta_clicks.
+  if (GO[urlPath]) {
+    if (req.method === 'GET') {
+      db.prepare('INSERT INTO cta_clicks (target, audience, referer) VALUES (?, ?, ?)').run(
+        urlPath.slice('/go/'.length),
+        site || 'unknown',
+        String(req.headers.referer || '').slice(0, 300),
+      );
+    }
+    return send(res, 302, '', { Location: GO[urlPath] });
+  }
+
+  if (urlPath === '/favicon.ico') return serveFile(req, res, path.join(ROOT, 'shared/assets/favicon.png'));
+
   // Shared static assets under /shared/ (site-independent, so before the site check)
   if (urlPath.startsWith('/shared/')) {
     const p = path.normalize(path.join(ROOT, urlPath));
     if (!p.startsWith(path.join(ROOT, 'shared'))) return send(res, 403, 'Forbidden');
-    return serveFile(res, p);
+    return serveFile(req, res, p);
   }
   if (!site) return send(res, 404, 'Not found', { 'Content-Type': 'text/plain' });
+
+  // Canonical 301s for site pages: *.html -> clean URL; trailing slash -> without.
+  let clean = null;
+  if (urlPath.endsWith('.html')) clean = urlPath.slice(0, -5).replace(/\/index$/, '/').replace(/^$/, '/');
+  else if (urlPath.length > 1 && urlPath.endsWith('/')) clean = urlPath.slice(0, -1);
+  if (clean !== null && clean !== urlPath) {
+    return send(res, 301, '', { Location: prefix + clean }); // prefix keeps /ministry|/nonprofit in local dev
+  }
 
   const siteRoot = path.join(ROOT, 'sites', site);
   let p = path.normalize(path.join(siteRoot, urlPath));
   if (!p.startsWith(siteRoot)) return send(res, 403, 'Forbidden');
   if (urlPath === '/' || urlPath === '') p = path.join(siteRoot, 'index.html');
   else if (!path.extname(p)) p = `${p}.html`; // clean URLs: /services -> services.html
-  serveFile(res, p);
+  serveFile(req, res, p);
 });
 
 server.listen(PORT, () => console.log(`pwa-sites listening on :${PORT}`));

@@ -10,31 +10,52 @@
 <meta property="og:title" content="Contact Pure Water Automations — Nonprofit Support">
 <meta property="og:description" content="Book a free 15-minute assessment call or send us a message about your nonprofit's admin, website, outreach, or grant needs.">
 <meta property="og:url" content="https://nonprofits.purewaterautomations.com/contact">
-<meta property="og:image" content="https://nonprofits.purewaterautomations.com/shared/assets/logo.png">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://nonprofits.purewaterautomations.com/shared/assets/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Contact Pure Water Automations — Nonprofit Support">
 <meta name="twitter:description" content="Book a free 15-minute assessment call or send us a message about your nonprofit's admin, website, outreach, or grant needs.">
-<meta name="twitter:image" content="https://nonprofits.purewaterautomations.com/shared/assets/logo.png">
-<link rel="icon" type="image/png" href="/shared/assets/logo.png">
-<link rel="apple-touch-icon" href="/shared/assets/logo.png">
-<link rel="stylesheet" href="/shared/ds/tokens/fonts.css">
-<link rel="stylesheet" href="/shared/ds/tokens/base.css">
-<link rel="stylesheet" href="/shared/ds/tokens/colors.css">
-<link rel="stylesheet" href="/shared/ds/tokens/typography.css">
-<link rel="stylesheet" href="/shared/ds/tokens/spacing.css">
-<link rel="stylesheet" href="/shared/ds/tokens/radius.css">
-<link rel="stylesheet" href="/shared/ds/tokens/shadows.css">
-<link rel="stylesheet" href="/shared/ds/tokens/motion.css">
+<meta name="twitter:image" content="https://nonprofits.purewaterautomations.com/shared/assets/og-card.png">
+<link rel="icon" type="image/png" href="/shared/assets/favicon.png">
+<link rel="apple-touch-icon" href="/shared/assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/shared/ds/styles.css">
-<link rel="stylesheet" href="/styles.css">
+<link rel="stylesheet" href="styles.css">
 <script src="/shared/js/site.js" defer></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://nonprofits.purewaterautomations.com/" },
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nonprofits.purewaterautomations.com/#org",
+      "name": "Pure Water Automations",
+      "legalName": "Pure Water Automations LLC",
+      "url": "https://nonprofits.purewaterautomations.com/",
+      "logo": "https://nonprofits.purewaterautomations.com/shared/assets/logo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "email": "purewaterva58@gmail.com",
+        "telephone": "+1-908-357-7801"
+      },
+      "sameAs": [
+        "https://www.facebook.com/share/1Ds4DaRfEy/",
+        "https://www.instagram.com/purewaterautomations_llc",
+        "https://www.threads.com/@purewaterautomations_llc",
+        "https://www.linkedin.com/in/pure-water-automations-llc"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://nonprofits.purewaterautomations.com/" },
     { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://nonprofits.purewaterautomations.com/contact" }
+      ]
+    }
   ]
 }
 </script>
@@ -44,20 +65,20 @@
 <header>
   <nav class="nav" aria-label="Main navigation">
     <a class="nav__brand" href="/" aria-label="Pure Water Automations — home">
-      <img class="nav__logo" src="/shared/assets/logo/pwa-logo-full-color-transparent.png" alt="Pure Water Automations">
+      <img class="nav__logo" src="/shared/assets/logo/pwa-logo-full-color-transparent.png" alt="Pure Water Automations" width="1253" height="852">
       <span class="nav__badge">For Non-profits</span>
     </a>
-    <button class="nav__toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Toggle menu">
+    <button class="nav__toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle menu">
       <span></span><span></span><span></span>
     </button>
-    <div class="nav__menu" data-nav-menu>
+    <div class="nav__menu" id="nav-menu" data-nav-menu>
       <a class="nav__link" href="/">Home</a>
       <a class="nav__link" href="/services">What We Do</a>
       <a class="nav__link" href="/pricing">Pricing</a>
       <a class="nav__link" href="/#faq">FAQ</a>
       <a class="nav__link" href="/about">About</a>
       <a class="nav__link" href="/contact">Contact</a>
-      <a class="btn btn--primary btn--sm" href="https://team.purewaterautomations.com/discover" target="_blank" rel="noopener">Book a Free Assessment</a>
+      <a class="btn btn--primary btn--sm" href="/go/discover">Book a Free Assessment</a>
     </div>
   </nav>
 </header>
@@ -69,13 +90,13 @@
       <h1>Tell Us What Your Mission <span class="accent">Needs Next</span></h1>
       <p>The fastest path is a free 15-minute assessment call — we ask what result you want, then tell you honestly whether we're a fit. Prefer to write first? Use the form below and we'll reply within one business day.</p>
       <div class="cta-row" style="margin-top: 28px;">
-        <a class="btn btn--primary btn--lg" href="https://team.purewaterautomations.com/discover" target="_blank" rel="noopener">Book a Free Assessment</a>
+        <a class="btn btn--primary btn--lg" href="/go/discover">Book a Free Assessment</a>
       </div>
     </div>
   </section>
 
   <section class="section--sm section--gray">
-    <form class="lead-form-card" data-lead-form novalidate>
+    <form class="lead-form-card" data-lead-form>
       <div class="form__row">
         <div class="form__field">
           <label for="lead-name">Name *</label>
@@ -135,7 +156,7 @@
   <div class="footer__inner">
     <div class="footer__grid">
       <div>
-        <img class="footer__logo" src="/shared/assets/logo/pwa-logo-full-white.png" alt="Pure Water Automations">
+        <img class="footer__logo" src="/shared/assets/logo/pwa-logo-full-white.png" alt="Pure Water Automations" width="1253" height="852" loading="lazy">
         <p class="footer__blurb">Virtual assistants and practical systems for non-profit leaders — so more of your team's time and budget goes to the mission itself.</p>
         <p class="footer__tagline">Refreshing leaders. Removing burdens. Keeping mission work moving.</p>
       </div>
@@ -152,7 +173,7 @@
         <span class="footer__head">Contact</span>
         <a href="tel:+19083577801">+1 (908) 357-7801</a>
         <a href="mailto:purewaterva58@gmail.com">purewaterva58@gmail.com</a>
-        <a class="btn btn--secondary btn--sm" href="https://team.purewaterautomations.com/discover" target="_blank" rel="noopener">Book Your Free Assessment</a>
+        <a class="btn btn--secondary btn--sm" href="/go/discover">Book Your Free Assessment</a>
       </div>
     </div>
     <div class="footer__bottom">

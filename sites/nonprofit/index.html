@@ -10,23 +10,20 @@
 <meta property="og:title" content="Virtual Assistants for Nonprofits | Pure Water Automations">
 <meta property="og:description" content="An affordable virtual assistant team for nonprofits — admin support, websites, outreach, bookkeeping, and grant readiness.">
 <meta property="og:url" content="https://nonprofits.purewaterautomations.com/">
-<meta property="og:image" content="https://nonprofits.purewaterautomations.com/shared/assets/logo.png">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://nonprofits.purewaterautomations.com/shared/assets/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Virtual Assistants for Nonprofits | Pure Water Automations">
 <meta name="twitter:description" content="An affordable virtual assistant team for nonprofits — admin support, websites, outreach, bookkeeping, and grant readiness.">
-<meta name="twitter:image" content="https://nonprofits.purewaterautomations.com/shared/assets/logo.png">
-<link rel="icon" type="image/png" href="/shared/assets/logo.png">
-<link rel="apple-touch-icon" href="/shared/assets/logo.png">
-<link rel="stylesheet" href="/shared/ds/tokens/fonts.css">
-<link rel="stylesheet" href="/shared/ds/tokens/base.css">
-<link rel="stylesheet" href="/shared/ds/tokens/colors.css">
-<link rel="stylesheet" href="/shared/ds/tokens/typography.css">
-<link rel="stylesheet" href="/shared/ds/tokens/spacing.css">
-<link rel="stylesheet" href="/shared/ds/tokens/radius.css">
-<link rel="stylesheet" href="/shared/ds/tokens/shadows.css">
-<link rel="stylesheet" href="/shared/ds/tokens/motion.css">
+<meta name="twitter:image" content="https://nonprofits.purewaterautomations.com/shared/assets/og-card.png">
+<link rel="icon" type="image/png" href="/shared/assets/favicon.png">
+<link rel="apple-touch-icon" href="/shared/assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/shared/ds/styles.css">
-<link rel="stylesheet" href="/styles.css">
+<link rel="stylesheet" href="styles.css">
 <script src="/shared/js/site.js" defer></script>
 <script type="application/ld+json">
 {
@@ -35,11 +32,16 @@
     {
       "@type": "Organization",
       "@id": "https://nonprofits.purewaterautomations.com/#org",
-      "name": "Pure Water Automations LLC",
+      "name": "Pure Water Automations",
+      "legalName": "Pure Water Automations LLC",
       "url": "https://nonprofits.purewaterautomations.com/",
       "logo": "https://nonprofits.purewaterautomations.com/shared/assets/logo.png",
-      "email": "purewaterva58@gmail.com",
-      "telephone": "+1-908-357-7801",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "email": "purewaterva58@gmail.com",
+        "telephone": "+1-908-357-7801"
+      },
       "sameAs": [
         "https://www.facebook.com/share/1Ds4DaRfEy/",
         "https://www.instagram.com/purewaterautomations_llc",
@@ -78,7 +80,7 @@
         {
           "@type": "Question",
           "name": "What if it's not working?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Plans are month-to-month. Tell us within the first two weeks of a new engagement and we'll work with you to adjust it." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Plans are month-to-month. Tell us early if something's off and we'll work out the right adjustment together." }
         },
         {
           "@type": "Question",
@@ -96,20 +98,20 @@
 <header>
   <nav class="nav" aria-label="Main navigation">
     <a class="nav__brand" href="/" aria-label="Pure Water Automations — home">
-      <img class="nav__logo" src="/shared/assets/logo/pwa-logo-full-color-transparent.png" alt="Pure Water Automations">
+      <img class="nav__logo" src="/shared/assets/logo/pwa-logo-full-color-transparent.png" alt="Pure Water Automations" width="1253" height="852">
       <span class="nav__badge">For Non-profits</span>
     </a>
-    <button class="nav__toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Toggle menu">
+    <button class="nav__toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle menu">
       <span></span><span></span><span></span>
     </button>
-    <div class="nav__menu" data-nav-menu>
+    <div class="nav__menu" id="nav-menu" data-nav-menu>
       <a class="nav__link" href="/">Home</a>
       <a class="nav__link" href="/services">What We Do</a>
       <a class="nav__link" href="/pricing">Pricing</a>
       <a class="nav__link" href="/#faq">FAQ</a>
       <a class="nav__link" href="/about">About</a>
       <a class="nav__link" href="/contact">Contact</a>
-      <a class="btn btn--primary btn--sm" href="https://team.purewaterautomations.com/discover" target="_blank" rel="noopener">Book a Free Assessment</a>
+      <a class="btn btn--primary btn--sm" href="/go/discover">Book a Free Assessment</a>
     </div>
   </nav>
 </header>
@@ -124,8 +126,8 @@
       <h1>Get found. Get trusted. <span class="accent">Get ready for funding.</span></h1>
       <p class="hero__sub">Pure Water Automations gives nonprofits an affordable virtual team — so your website, outreach, admin, and grant readiness stop depending on one overworked volunteer.</p>
       <div class="cta-row">
-        <a class="btn btn--primary btn--lg" href="https://team.purewaterautomations.com/discover" target="_blank" rel="noopener">Get Admin &amp; Ops Support</a>
-        <a class="btn btn--secondary btn--lg" href="https://team.purewaterautomations.com/discover" target="_blank" rel="noopener">Get Grant-Ready</a>
+        <a class="btn btn--primary btn--lg" href="/go/discover">Get Admin &amp; Ops Support</a>
+        <a class="btn btn--secondary btn--lg" href="/go/discover">Get Grant-Ready</a>
       </div>
       <p class="hero__note">Both lead to the same short assessment call — we ask what result you want, then tell you honestly whether we're a fit.</p>
     </div>
@@ -147,32 +149,32 @@
       </div>
       <div class="svc-grid">
         <div class="svc-card reveal">
-          <div class="svc-card__icon"><img src="/shared/assets/icons/inbox-flow.svg" alt=""></div>
+          <div class="svc-card__icon"><img src="/shared/assets/icons/inbox-flow.svg" alt="" width="32" height="32" loading="lazy"></div>
           <h3>Admin relief</h3>
           <p>Email, calendars, communications, follow-ups, and document organization — handled every week, so your leaders can lead.</p>
         </div>
         <div class="svc-card reveal">
-          <div class="svc-card__icon"><img src="/shared/assets/icons/systems-stack.svg" alt=""></div>
+          <div class="svc-card__icon"><img src="/shared/assets/icons/systems-stack.svg" alt="" width="32" height="32" loading="lazy"></div>
           <h3>Websites &amp; landing pages</h3>
           <p>A professional site with your story, programs, photos, contact info, and lead-capture — built to help families, donors, and funders find and trust you.</p>
         </div>
         <div class="svc-card reveal">
-          <div class="svc-card__icon"><img src="/shared/assets/icons/communication.svg" alt=""></div>
+          <div class="svc-card__icon"><img src="/shared/assets/icons/communication.svg" alt="" width="32" height="32" loading="lazy"></div>
           <h3>Marketing &amp; social media</h3>
           <p>Consistent posting, outreach campaigns, and community engagement that keep your mission visible.</p>
         </div>
         <div class="svc-card reveal">
-          <div class="svc-card__icon"><img src="/shared/assets/icons/reporting.svg" alt=""></div>
+          <div class="svc-card__icon"><img src="/shared/assets/icons/reporting.svg" alt="" width="32" height="32" loading="lazy"></div>
           <h3>Bookkeeping</h3>
           <p>Remote bookkeeping led by an experienced professional bookkeeper, with our VA team handling the routine work at nonprofit-friendly rates.</p>
         </div>
         <div class="svc-card reveal">
-          <div class="svc-card__icon"><img src="/shared/assets/icons/sop-library.svg" alt=""></div>
+          <div class="svc-card__icon"><img src="/shared/assets/icons/sop-library.svg" alt="" width="32" height="32" loading="lazy"></div>
           <h3>Grant support &amp; funding readiness</h3>
           <p>Grant research, application preparation and submission, and the systems funders expect to see — including Google Ad Grant applications. See "A word about grants" below — we'll always be straight with you about how this works.</p>
         </div>
         <div class="svc-card reveal">
-          <div class="svc-card__icon"><img src="/shared/assets/icons/va-support.svg" alt=""></div>
+          <div class="svc-card__icon"><img src="/shared/assets/icons/va-support.svg" alt="" width="32" height="32" loading="lazy"></div>
           <h3>One team, one point of contact</h3>
           <p>A dedicated assistant who knows your organization, supervised by a team leader, with specialists pulled in as your work needs them.</p>
         </div>
@@ -207,18 +209,15 @@
   <section class="section section--tint">
     <div class="founder-card reveal">
       <div class="founder-card__media">
-        <div class="founder-card__placeholder">
-          <div class="founder-card__play" aria-hidden="true">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="#4dc4e8"><path d="M8 5v14l11-7z"></path></svg>
-          </div>
-          <div class="founder-card__soon">Founder video coming soon</div>
-        </div>
+        <img class="founder-card__img" src="/shared/assets/images/09-mission-moving-forward.webp" alt="" width="1536" height="1024" loading="lazy">
       </div>
       <div class="founder-card__body">
         <span class="eyebrow">Meet Your Team's Founders</span>
         <h2>The People Behind Your Virtual Team</h2>
         <div class="founder-card__name">Justin Okamoto &amp; Eunmi Rangala-Maddox</div>
         <div class="founder-card__role">Co-founders, Pure Water Automations</div>
+        <p style="font-size: 15px; color: var(--color-neutral-600); line-height: 1.7; margin: 16px 0 20px;">We built PWA after watching mission-driven leaders spend their best hours on paperwork instead of people.</p>
+        <a class="btn btn--ghost btn--sm" href="/about" style="align-self: flex-start;">Meet the Team</a>
       </div>
     </div>
   </section>
@@ -242,18 +241,18 @@
           <p><strong>Best for:</strong> Steady, light support — one recurring lane like admin or social media.</p>
           <p style="margin-bottom: 20px;"><strong>Pace:</strong> Bigger projects take 3–6 months.</p>
           <div class="price-card__cta">
-            <a class="btn btn--ghost btn--block" href="https://team.purewaterautomations.com/discover" target="_blank" rel="noopener">Start with Starter</a>
+            <a class="btn btn--ghost btn--block" href="/go/discover">Start with Starter</a>
           </div>
         </div>
         <div class="price-card price-card--featured reveal">
-          <span class="price-card__flag">Most Choose This</span>
+          <span class="price-card__flag">Recommended</span>
           <h3>Launch</h3>
           <div class="price-line"><span class="price-amt">$800</span><span class="price-per">/month</span></div>
           <div class="price-hrs">~80 hrs</div>
           <p><strong>Best for:</strong> Real movement — website, outreach, and grant prep advancing together.</p>
           <p style="margin-bottom: 20px;"><strong>Pace:</strong> Most foundations built in the first 1–2 months.</p>
           <div class="price-card__cta">
-            <a class="btn btn--secondary btn--block" href="https://team.purewaterautomations.com/discover" target="_blank" rel="noopener">Start with Launch</a>
+            <a class="btn btn--secondary btn--block" href="/go/discover">Start with Launch</a>
           </div>
         </div>
         <div class="price-card reveal">
@@ -263,13 +262,13 @@
           <p><strong>Best for:</strong> High-touch support across everything at once.</p>
           <p style="margin-bottom: 20px;"><strong>Pace:</strong> Fastest path.</p>
           <div class="price-card__cta">
-            <a class="btn btn--ghost btn--block" href="https://team.purewaterautomations.com/discover" target="_blank" rel="noopener">Start with Managed</a>
+            <a class="btn btn--ghost btn--block" href="/go/discover">Start with Managed</a>
           </div>
         </div>
       </div>
       <p class="fineprint">All plans include a dedicated assistant and team-leader oversight. Hours cover all work on your account, including project communication and coordination. Payment is collected at the start of each month before work begins. Every plan is month-to-month — no long-term contract, adjust or cancel anytime.</p>
       <p class="pricing-note"><strong>Not sure where to start?</strong> Most organizations that want visible progress choose <strong>Launch</strong>. Starter is a careful first step; Managed is for teams ready to move on every front.</p>
-      <p class="pricing-note"><strong>If something's not working:</strong> Tell us within the first two weeks of a new plan and we'll adjust it with you.</p>
+      <p class="pricing-note"><strong>If something's not working:</strong> every plan is month-to-month — tell us early and we'll work out the right adjustment together.</p>
     </div>
   </section>
 
@@ -280,29 +279,29 @@
       </div>
       <div class="steps">
         <div class="step-card reveal">
-          <div class="step-num" aria-hidden="true">1</div>
+          <div class="step-num">1</div>
           <h3>Assessment call (15 min, free)</h3>
           <p>Tell us the result you want in the next 30–60 days. We'll tell you what's realistic and recommend a starting plan — or tell you honestly if we're not the right fit.</p>
         </div>
         <div class="step-card reveal">
-          <div class="step-num" aria-hidden="true">2</div>
+          <div class="step-num">2</div>
           <h3>Onboarding within a week</h3>
           <p>Our onboarding lead gathers your branding, access, and materials and sets up your client workspace.</p>
         </div>
         <div class="step-card reveal">
-          <div class="step-num" aria-hidden="true">3</div>
+          <div class="step-num">3</div>
           <h3>Weekly delivery</h3>
           <p>Your assistant works your plan; you see progress every week without chasing anyone.</p>
         </div>
         <div class="step-card reveal">
-          <div class="step-num" aria-hidden="true">4</div>
+          <div class="step-num">4</div>
           <h3>Adjust as you grow</h3>
           <p>Scale hours up or down monthly — many clients start small and grow into grant work once the foundation is set.</p>
         </div>
       </div>
       <div class="cta-row">
-        <a class="btn btn--primary" href="https://team.purewaterautomations.com/discover" target="_blank" rel="noopener">Get Admin &amp; Ops Support</a>
-        <a class="btn btn--secondary" href="https://team.purewaterautomations.com/discover" target="_blank" rel="noopener">Get Grant-Ready</a>
+        <a class="btn btn--primary" href="/go/discover">Get Admin &amp; Ops Support</a>
+        <a class="btn btn--secondary" href="/go/discover">Get Grant-Ready</a>
       </div>
     </div>
   </section>
@@ -342,7 +341,7 @@
         </div>
         <div class="faq-item reveal">
           <h3>What if it's not working?</h3>
-          <p>Plans are month-to-month. Tell us within the first two weeks of a new engagement and we'll work with you to adjust it.</p>
+          <p>Plans are month-to-month. Tell us early if something's off and we'll work out the right adjustment together.</p>
         </div>
         <div class="faq-item reveal">
           <h3>How do you handle sensitive information?</h3>
@@ -359,8 +358,8 @@
         <h2>Your mission deserves a team.</h2>
         <p>Start with a free 15-minute assessment call. Worst case, you leave with a clearer picture of your next step.</p>
         <div class="cta-row">
-          <a class="btn btn--secondary btn--lg" href="https://team.purewaterautomations.com/discover" target="_blank" rel="noopener">Get Admin &amp; Ops Support</a>
-          <a class="btn btn--glass" href="https://team.purewaterautomations.com/discover" target="_blank" rel="noopener">Get Grant-Ready</a>
+          <a class="btn btn--secondary btn--lg" href="/go/discover">Get Admin &amp; Ops Support</a>
+          <a class="btn btn--glass" href="/go/discover">Get Grant-Ready</a>
         </div>
         <p class="cta-panel__note">No commitment, pressure, or obligation.</p>
       </div>
@@ -373,7 +372,7 @@
       <h2 style="font-size: clamp(26px, 3vw, 36px);">Send us a message instead</h2>
       <p>The fastest path is still the free assessment call — but if email suits you better, tell us a little about your organization and we'll reply within one business day.</p>
     </div>
-    <form class="lead-form-card" data-lead-form novalidate>
+    <form class="lead-form-card" data-lead-form>
       <div class="form__row">
         <div class="form__field">
           <label for="lead-name">Name *</label>
@@ -421,7 +420,7 @@
   <div class="footer__inner">
     <div class="footer__grid">
       <div>
-        <img class="footer__logo" src="/shared/assets/logo/pwa-logo-full-white.png" alt="Pure Water Automations">
+        <img class="footer__logo" src="/shared/assets/logo/pwa-logo-full-white.png" alt="Pure Water Automations" width="1253" height="852" loading="lazy">
         <p class="footer__blurb">Virtual assistants and practical systems for non-profit leaders — so more of your team's time and budget goes to the mission itself.</p>
         <p class="footer__tagline">Refreshing leaders. Removing burdens. Keeping mission work moving.</p>
       </div>
@@ -438,7 +437,7 @@
         <span class="footer__head">Contact</span>
         <a href="tel:+19083577801">+1 (908) 357-7801</a>
         <a href="mailto:purewaterva58@gmail.com">purewaterva58@gmail.com</a>
-        <a class="btn btn--secondary btn--sm" href="https://team.purewaterautomations.com/discover" target="_blank" rel="noopener">Book Your Free Assessment</a>
+        <a class="btn btn--secondary btn--sm" href="/go/discover">Book Your Free Assessment</a>
       </div>
     </div>
     <div class="footer__bottom">
