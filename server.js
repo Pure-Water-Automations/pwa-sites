@@ -151,15 +151,15 @@ const server = http.createServer((req, res) => {
     return handleLead(req, res, site || 'unknown');
   }
   if (urlPath === '/healthz') return send(res, 200, 'ok', { 'Content-Type': 'text/plain' });
-  if (!site) return send(res, 404, 'Not found', { 'Content-Type': 'text/plain' });
   if (req.method !== 'GET' && req.method !== 'HEAD') return send(res, 405, 'Method not allowed');
 
-  // Shared static assets under /shared/
+  // Shared static assets under /shared/ (site-independent, so before the site check)
   if (urlPath.startsWith('/shared/')) {
     const p = path.normalize(path.join(ROOT, urlPath));
     if (!p.startsWith(path.join(ROOT, 'shared'))) return send(res, 403, 'Forbidden');
     return serveFile(res, p);
   }
+  if (!site) return send(res, 404, 'Not found', { 'Content-Type': 'text/plain' });
 
   const siteRoot = path.join(ROOT, 'sites', site);
   let p = path.normalize(path.join(siteRoot, urlPath));
