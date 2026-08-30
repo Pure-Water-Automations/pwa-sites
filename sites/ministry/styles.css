@@ -249,9 +249,10 @@ h1, h2, h3 { font-family: var(--font-display, 'Outfit', system-ui, sans-serif); 
 .pricing-note a { color: var(--color-sky-700); font-weight: 600; }
 
 /* ── Bookkeeping model table ──────────────────────────────────────── */
-.model-table { border: 1px solid var(--color-neutral-200); border-radius: 20px; overflow: hidden; margin-bottom: 24px; }
-.model-row { display: grid; grid-template-columns: 1fr 1.2fr; }
-.model-cell { padding: 18px 28px; border-bottom: 1px solid var(--color-neutral-100); font-family: var(--font-sans); font-size: 15px; color: var(--color-neutral-700); line-height: 1.6; }
+.model-table { width: 100%; border-collapse: separate; border-spacing: 0; table-layout: fixed; border: 1px solid var(--color-neutral-200); border-radius: 20px; overflow: hidden; margin-bottom: 24px; }
+.model-table th { text-align: left; }
+.model-head--local { width: 45.5%; }
+.model-cell { padding: 18px 28px; border-bottom: 1px solid var(--color-neutral-100); font-family: var(--font-sans); font-size: 15px; color: var(--color-neutral-700); line-height: 1.6; vertical-align: top; }
 .model-row:last-child .model-cell { border-bottom: 0; }
 .model-cell--we { background: var(--color-sky-50); color: var(--color-navy-900); }
 .model-cell--empty { color: var(--color-neutral-400); }
@@ -274,7 +275,8 @@ h1, h2, h3 { font-family: var(--font-display, 'Outfit', system-ui, sans-serif); 
 .faq-list { display: flex; flex-direction: column; gap: 14px; }
 .faq-item { background: var(--color-neutral-0); border: 1px solid var(--color-neutral-200); border-radius: 18px; padding: 26px 30px; }
 .faq-q { font-family: var(--font-display); font-size: 17px; font-weight: 600; color: var(--color-navy-900); margin: 0 0 10px; }
-.faq-a { font-family: var(--font-sans); font-size: 14px; color: var(--color-neutral-700); line-height: 1.75; margin: 0; }
+.faq-a { font-family: var(--font-sans); font-size: 14px; color: var(--color-neutral-700); line-height: 1.75; margin: 0 0 10px; }
+.faq-a:last-child { margin-bottom: 0; }
 
 /* ── Values / team ────────────────────────────────────────────────── */
 .value-tile { background: var(--color-neutral-50); border-radius: 20px; padding: 28px 22px; text-align: center; }
@@ -340,6 +342,7 @@ h1, h2, h3 { font-family: var(--font-display, 'Outfit', system-ui, sans-serif); 
 }
 .form-field textarea { min-height: 120px; resize: vertical; }
 .form-actions { margin-top: 20px; display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+.form-note { font-family: var(--font-sans); font-size: 13px; color: var(--color-neutral-600); margin: 12px 0 0; }
 .form-status { font-family: var(--font-sans); font-size: 14px; color: var(--color-neutral-600); margin: 12px 0 0; min-height: 1.4em; }
 .form-status--ok { color: var(--color-success-dark); }
 .form-status--err { color: var(--color-error-dark); }
@@ -376,6 +379,7 @@ h1, h2, h3 { font-family: var(--font-display, 'Outfit', system-ui, sans-serif); 
 html.js .reveal { opacity: 0; transform: translateY(18px); transition: opacity var(--duration-slower) var(--ease-out), transform var(--duration-slower) var(--ease-out); }
 html.js .reveal.is-visible { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
   html.js .reveal { opacity: 1; transform: none; transition: none; }
   .hero-chip-dot { animation: none; }
 }
@@ -413,9 +417,10 @@ html.js .reveal.is-visible { opacity: 1; transform: none; }
   .footer { padding: 56px 20px 32px; }
 
   .grid--2, .grid--3, .grid--4, .grid--5 { grid-template-columns: 1fr; }
-  .model-row { grid-template-columns: 1fr; }
-  .model-head--local { border-bottom: 0; }
+  .model-table, .model-table thead, .model-table tbody, .model-row, .model-head, .model-cell { display: block; }
+  .model-head--local { width: auto; border-bottom: 0; }
   .model-cell { border-bottom: 0; }
+  .model-cell--empty { display: none; }
   .model-cell--we { border-bottom: 1px solid var(--color-neutral-100); }
   .model-row:last-child .model-cell--we { border-bottom: 0; }
   .form-grid { grid-template-columns: 1fr; }

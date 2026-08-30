@@ -22,13 +22,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/shared/ds/tokens/base.css">
-<link rel="stylesheet" href="/shared/ds/tokens/colors.css">
-<link rel="stylesheet" href="/shared/ds/tokens/typography.css">
-<link rel="stylesheet" href="/shared/ds/tokens/spacing.css">
-<link rel="stylesheet" href="/shared/ds/tokens/radius.css">
-<link rel="stylesheet" href="/shared/ds/tokens/shadows.css">
-<link rel="stylesheet" href="/shared/ds/tokens/motion.css">
 <link rel="stylesheet" href="/shared/ds/styles.css">
 <link rel="stylesheet" href="styles.css">
 <script type="application/ld+json">
@@ -49,7 +42,7 @@
     {
       "@type": "Question",
       "name": "We collect cash and check donations in person — how does a remote bookkeeper handle that?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Nothing changes about how your offering is counted and deposited. That stays local, in person — and if your church already has two people count and verify the offering before it's deposited, that continues exactly as it is now. The only new habit is depositing the full amount intact and keeping a simple record of what was deposited, rather than pulling cash out to cover a reimbursement on the spot. Checks are often eligible for mobile deposit through your bank; cash still needs someone physically local, same as today. Our part starts once the money is deposited: we record and categorize it, reconcile it against your bank statement, match it to donor and pledge records, and make sure it's reflected accurately in your reports." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Nothing changes about how your offering is counted and deposited. That stays local, in person — and if your church already has two people count and verify the offering before it's deposited (standard practice at most churches, and a good internal control regardless of who does your books), that continues exactly as it is now. The only new habit is depositing the full amount intact and keeping a simple record of what was deposited, rather than pulling cash out to cover a reimbursement on the spot — that one change is what makes remote reconciliation actually work. Checks are often eligible for mobile deposit through your bank, the same way many churches already do it; cash still needs someone physically local, same as today. Our part starts once the money is deposited: we record and categorize it, reconcile it against your bank statement, match it to donor and pledge records, and make sure it's reflected accurately in your reports. The people you trust to physically handle the offering keep doing exactly that; we handle what happens to the numbers afterward." }
     },
     {
       "@type": "Question",
@@ -88,8 +81,8 @@
 {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "@id": "https://ministry.purewaterautomations.com/#org",
-  "name": "Pure Water Automations",
+  "@id": "https://purewaterautomations.com/#organization",
+  "name": "Pure Water Automations LLC",
   "legalName": "Pure Water Automations LLC",
   "url": "https://ministry.purewaterautomations.com",
   "logo": "https://ministry.purewaterautomations.com/shared/assets/logo.png",
@@ -169,24 +162,29 @@
       <h2 class="h-sub">You don't need a skilled local bookkeeper. You need someone who can deposit money, and someone who can approve spending.</h2>
       <p class="section-sub" style="max-width: none;">That's the honest version of what changes. Everything in between — the actual bookkeeping — is on us.</p>
     </div>
-    <div class="model-table reveal">
-      <div class="model-row">
-        <div class="model-head model-head--local">Locally, you need…</div>
-        <div class="model-head model-head--we">We handle…</div>
-      </div>
-      <div class="model-row">
-        <div class="model-cell">Someone to count, confirm, and deposit cash and checks</div>
-        <div class="model-cell model-cell--we">Recording every deposit and matching it to the right fund</div>
-      </div>
-      <div class="model-row">
-        <div class="model-cell">Someone to approve expenses</div>
-        <div class="model-cell model-cell--we">Coding, categorizing, and reconciling every transaction</div>
-      </div>
-      <div class="model-row">
-        <div class="model-cell model-cell--empty">—</div>
-        <div class="model-cell model-cell--we">Making sure bank access and payment authorization stay stateside — with your church or a designated U.S.-based finance lead</div>
-      </div>
-    </div>
+    <table class="model-table reveal">
+      <caption class="sr-only">What stays local with your church, and what the bookkeeping team handles</caption>
+      <thead>
+        <tr class="model-row">
+          <th scope="col" class="model-head model-head--local">Locally, you need…</th>
+          <th scope="col" class="model-head model-head--we">We handle…</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="model-row">
+          <td class="model-cell">Someone to count, confirm, and deposit cash and checks</td>
+          <td class="model-cell model-cell--we">Recording every deposit and matching it to the right fund</td>
+        </tr>
+        <tr class="model-row">
+          <td class="model-cell">Someone to approve expenses</td>
+          <td class="model-cell model-cell--we">Coding, categorizing, and reconciling every transaction</td>
+        </tr>
+        <tr class="model-row">
+          <td class="model-cell model-cell--empty">—</td>
+          <td class="model-cell model-cell--we">Making sure bank access and payment authorization stay stateside — with your church or a designated U.S.-based finance lead</td>
+        </tr>
+      </tbody>
+    </table>
     <div class="safeguard reveal">
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4dc4e8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
       <p><strong>One safeguard worth spelling out:</strong> our bookkeeping team never has the ability to move money or access your bank account directly. They prepare everything — coded, matched, ready to go — but authorization to actually send a payment always stays stateside — with your church or a designated U.S.-based finance lead, never with the bookkeeping team. That separation isn't a limitation we're working around; it's how the service is built.</p>
@@ -267,7 +265,7 @@
 <section class="section--88 section--white">
   <div class="wrap wrap--860">
     <div class="quote-box reveal">
-      <h2>About pricing</h2>
+      <h2>About Pricing</h2>
       <p><strong>We don't publish a flat rate here, and we want to tell you why:</strong> bookkeeping cost depends on your congregation's size, transaction volume, and how much cleanup (if any) your current books need. Rather than guess with a generic number, we'd rather have a short conversation and give you an honest quote — and you'll be talking directly with the person who'd actually be doing the work, not a call center.</p>
       <a class="btn btn--primary" href="/go/discover">Get a Straightforward Quote</a>
     </div>
@@ -280,7 +278,9 @@
     <div class="faq-list">
       <div class="faq-item reveal">
         <h3 class="faq-q">We collect cash and check donations in person — how does a remote bookkeeper handle that?</h3>
-        <p class="faq-a">Nothing changes about how your offering is counted and deposited. That stays local, in person — and if your church already has two people count and verify the offering before it's deposited (standard practice at most churches, and a good internal control regardless of who does your books), that continues exactly as it is now. The only new habit is depositing the full amount intact and keeping a simple record of what was deposited, rather than pulling cash out to cover a reimbursement on the spot — that one change is what makes remote reconciliation actually work. Checks are often eligible for mobile deposit through your bank, the same way many churches already do it; cash still needs someone physically local, same as today. Our part starts once the money is deposited: we record and categorize it, reconcile it against your bank statement, match it to donor and pledge records, and make sure it's reflected accurately in your reports. The people you trust to physically handle the offering keep doing exactly that; we handle what happens to the numbers afterward.</p>
+        <p class="faq-a">Nothing changes about how your offering is counted and deposited. That stays local, in person — and if your church already has two people count and verify the offering before it's deposited (standard practice at most churches, and a good internal control regardless of who does your books), that continues exactly as it is now.</p>
+        <p class="faq-a">The only new habit is depositing the full amount intact and keeping a simple record of what was deposited, rather than pulling cash out to cover a reimbursement on the spot — that one change is what makes remote reconciliation actually work. Checks are often eligible for mobile deposit through your bank, the same way many churches already do it; cash still needs someone physically local, same as today.</p>
+        <p class="faq-a">Our part starts once the money is deposited: we record and categorize it, reconcile it against your bank statement, match it to donor and pledge records, and make sure it's reflected accurately in your reports. The people you trust to physically handle the offering keep doing exactly that; we handle what happens to the numbers afterward.</p>
       </div>
       <div class="faq-item reveal">
         <h3 class="faq-q">Who actually sees our financial data?</h3>
@@ -341,6 +341,7 @@
         <a href="church-bookkeeping">Church Bookkeeping</a>
         <a href="our-heart">Our Heart</a>
         <a href="contact">Contact</a>
+        <a href="https://nonprofits.purewaterautomations.com" target="_blank" rel="noopener">For Non-profits</a>
         <a href="https://purewaterautomations.com" target="_blank" rel="noopener">Main PWA Site</a>
       </nav>
       <div class="footer-contact">

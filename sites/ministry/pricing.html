@@ -22,13 +22,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/shared/ds/tokens/base.css">
-<link rel="stylesheet" href="/shared/ds/tokens/colors.css">
-<link rel="stylesheet" href="/shared/ds/tokens/typography.css">
-<link rel="stylesheet" href="/shared/ds/tokens/spacing.css">
-<link rel="stylesheet" href="/shared/ds/tokens/radius.css">
-<link rel="stylesheet" href="/shared/ds/tokens/shadows.css">
-<link rel="stylesheet" href="/shared/ds/tokens/motion.css">
 <link rel="stylesheet" href="/shared/ds/styles.css">
 <link rel="stylesheet" href="styles.css">
 <script type="application/ld+json">
@@ -45,8 +38,8 @@
 {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "@id": "https://ministry.purewaterautomations.com/#org",
-  "name": "Pure Water Automations",
+  "@id": "https://purewaterautomations.com/#organization",
+  "name": "Pure Water Automations LLC",
   "legalName": "Pure Water Automations LLC",
   "url": "https://ministry.purewaterautomations.com",
   "logo": "https://ministry.purewaterautomations.com/shared/assets/logo.png",
@@ -62,6 +55,28 @@
     "https://www.threads.com/@purewaterautomations_llc",
     "https://www.linkedin.com/in/pure-water-automations-llc"
   ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Ministry Virtual Assistant Packages",
+  "url": "https://ministry.purewaterautomations.com/pricing",
+  "provider": { "@id": "https://purewaterautomations.com/#organization" },
+  "areaServed": "US",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Ministry Packages",
+    "itemListElement": [
+      { "@type": "Offer", "name": "Spring", "price": "200", "priceCurrency": "USD", "description": "A gentle start for a small community" },
+      { "@type": "Offer", "name": "Stream", "price": "800", "priceCurrency": "USD", "description": "Steady help for an active community" },
+      { "@type": "Offer", "name": "River", "price": "1400", "priceCurrency": "USD", "description": "Consistent support for a growing ministry" },
+      { "@type": "Offer", "name": "Ocean", "price": "2400", "priceCurrency": "USD", "description": "Full support for national & regional work" },
+      { "@type": "Offer", "name": "Ocean Plus", "price": "3600", "priceCurrency": "USD", "description": "High volume, faster turnaround" },
+      { "@type": "Offer", "name": "Ocean Enterprise", "price": "4700", "priceCurrency": "USD", "description": "Maximum support for large-scale providence" }
+    ]
+  }
 }
 </script>
 </head>
@@ -118,7 +133,7 @@
         <p class="plan-desc">A gentle start for a small community</p>
         <div class="plan-price"><span class="plan-amount">$200</span><span class="plan-period">/month</span></div>
         <div class="check-list">
-          <span>✓ 20 VA hours per month (5/week)</span>
+          <span>✓ 20 VA hours per month (≈ 5 hrs/week on a 4-week service month)</span>
           <span>✓ Email &amp; appointment management</span>
           <span>✓ Member inquiries &amp; database upkeep</span>
         </div>
@@ -129,7 +144,7 @@
         <p class="plan-desc">Steady help for an active community</p>
         <div class="plan-price"><span class="plan-amount">$800</span><span class="plan-period">/month</span></div>
         <div class="check-list">
-          <span>✓ 68 VA hours per month (17/week)</span>
+          <span>✓ 68 VA hours per month (≈ 17 hrs/week on a 4-week service month)</span>
           <span>✓ Team lead support: 2 hrs/week</span>
           <span>✓ Social media &amp; event coordination</span>
         </div>
@@ -141,7 +156,7 @@
         <p class="plan-desc">Consistent support for a growing ministry</p>
         <div class="plan-price"><span class="plan-amount">$1,400</span><span class="plan-period">/month</span></div>
         <div class="check-list">
-          <span>✓ 136 VA hours per month (34/week)</span>
+          <span>✓ 136 VA hours per month (≈ 34 hrs/week on a 4-week service month)</span>
           <span>✓ Team lead support: 4 hrs/week</span>
           <span>✓ Sunday bulletins, holy day campaigns &amp; automations</span>
           <span>✓ Personal assistant for new initiatives</span>
@@ -153,7 +168,7 @@
         <p class="plan-desc">Full support for national &amp; regional work</p>
         <div class="plan-price"><span class="plan-amount">$2,400</span><span class="plan-period">/month</span></div>
         <div class="check-list">
-          <span>✓ 244 VA hours per month (61/week)</span>
+          <span>✓ 244 VA hours per month (≈ 61 hrs/week on a 4-week service month)</span>
           <span>✓ Team lead support: 8 hrs/week</span>
           <span>✓ Dedicated assistant aligned with your goals</span>
           <span>✓ Reporting &amp; automation roadmap</span>
@@ -165,7 +180,7 @@
         <p class="plan-desc">High volume, faster turnaround</p>
         <div class="plan-price"><span class="plan-amount">$3,600</span><span class="plan-period">/month</span></div>
         <div class="check-list">
-          <span>✓ 392 VA hours per month (98/week)</span>
+          <span>✓ 392 VA hours per month (≈ 98 hrs/week on a 4-week service month)</span>
           <span>✓ Team lead support: 8 hrs/week</span>
           <span>✓ Everything in Ocean, expanded</span>
         </div>
@@ -176,14 +191,14 @@
         <p class="plan-desc">Maximum support for large-scale providence</p>
         <div class="plan-price"><span class="plan-amount">$4,700</span><span class="plan-period">/month</span></div>
         <div class="check-list">
-          <span>✓ 552 VA hours per month (138/week)</span>
+          <span>✓ 552 VA hours per month (≈ 138 hrs/week on a 4-week service month)</span>
           <span>✓ Team lead support: 8 hrs/week</span>
           <span>✓ Multi-department operational support</span>
         </div>
         <div class="plan-cta"><a class="btn btn--secondary btn--block" href="/go/discover">Talk to Us</a></div>
       </div>
     </div>
-    <p class="pricing-note">Every plan is month-to-month — no long-term contract, adjust or cancel anytime. Questions about fit? <a href="contact">Contact us</a> or visit the <a href="https://purewaterautomations.com" target="_blank" rel="noopener">main PWA site</a>.</p>
+    <p class="pricing-note">Weekly figures assume four service weeks per billing month. Every plan is month-to-month — no long-term contract, adjust or cancel anytime. Questions about fit? <a href="contact">Contact us</a> or visit the <a href="https://purewaterautomations.com" target="_blank" rel="noopener">main PWA site</a>.</p>
   </div>
 </section>
 
@@ -219,6 +234,7 @@
         <a href="church-bookkeeping">Church Bookkeeping</a>
         <a href="our-heart">Our Heart</a>
         <a href="contact">Contact</a>
+        <a href="https://nonprofits.purewaterautomations.com" target="_blank" rel="noopener">For Non-profits</a>
         <a href="https://purewaterautomations.com" target="_blank" rel="noopener">Main PWA Site</a>
       </nav>
       <div class="footer-contact">

@@ -11,6 +11,10 @@ Environment=DATA_DIR=/opt/pwa-sites/data
 Restart=always
 RestartSec=3
 User=root
+UMask=0077
+NoNewPrivileges=yes
+ProtectSystem=full
+ReadWritePaths=/opt/pwa-sites/data
 
 [Install]
 WantedBy=multi-user.target
