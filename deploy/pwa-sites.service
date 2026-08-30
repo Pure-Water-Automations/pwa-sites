@@ -1,0 +1,16 @@
+[Unit]
+Description=PWA audience marketing sites (ministry + nonprofits subdomains)
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/pwa-sites/current
+ExecStart=/usr/bin/node server.js
+Environment=PORT=8811
+Environment=DATA_DIR=/opt/pwa-sites/data
+Restart=always
+RestartSec=3
+User=root
+
+[Install]
+WantedBy=multi-user.target

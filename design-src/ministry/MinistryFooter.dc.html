@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="../_ds/pure-water-automations-design-system-9423d907-3e04-4ebc-a762-f06a16c0ec50/tokens/fonts.css">
+  <link rel="stylesheet" href="../_ds/pure-water-automations-design-system-9423d907-3e04-4ebc-a762-f06a16c0ec50/tokens/base.css">
+  <link rel="stylesheet" href="../_ds/pure-water-automations-design-system-9423d907-3e04-4ebc-a762-f06a16c0ec50/tokens/colors.css">
+  <link rel="stylesheet" href="../_ds/pure-water-automations-design-system-9423d907-3e04-4ebc-a762-f06a16c0ec50/tokens/typography.css">
+  <link rel="stylesheet" href="../_ds/pure-water-automations-design-system-9423d907-3e04-4ebc-a762-f06a16c0ec50/tokens/spacing.css">
+  <link rel="stylesheet" href="../_ds/pure-water-automations-design-system-9423d907-3e04-4ebc-a762-f06a16c0ec50/tokens/radius.css">
+  <link rel="stylesheet" href="../_ds/pure-water-automations-design-system-9423d907-3e04-4ebc-a762-f06a16c0ec50/tokens/shadows.css">
+  <link rel="stylesheet" href="../_ds/pure-water-automations-design-system-9423d907-3e04-4ebc-a762-f06a16c0ec50/tokens/motion.css">
+  <link rel="stylesheet" href="../_ds/pure-water-automations-design-system-9423d907-3e04-4ebc-a762-f06a16c0ec50/styles.css">
+  <script src="../_ds/pure-water-automations-design-system-9423d907-3e04-4ebc-a762-f06a16c0ec50/_ds_bundle.js"></script>
+</helmet>
+<div>
+  <sc-if value="{{ showCta }}" hint-placeholder-val="{{ true }}">
+    <section style="background: #ffffff; padding: 0 48px 100px;">
+      <div style="max-width: 1120px; margin: 0 auto; background: linear-gradient(135deg, #132272 0%, #1a278a 60%, #157ba0 100%); border-radius: 32px; padding: 72px 64px; position: relative; overflow: hidden;">
+        <div style="position: absolute; width: 480px; height: 480px; border-radius: 50%; background: radial-gradient(circle, rgba(77,196,232,0.25) 0%, transparent 65%); top: -160px; right: -100px; pointer-events: none;"></div>
+        <div style="position: relative; max-width: 640px;">
+          <h2 style="font-family: 'Outfit', system-ui, sans-serif; font-size: clamp(30px, 3.4vw, 42px); font-weight: 700; letter-spacing: -0.03em; line-height: 1.12; color: #ffffff; margin: 0 0 16px;">Your Mission Deserves Your Full Heart</h2>
+          <p style="font-family: 'DM Sans', system-ui, sans-serif; font-size: 17px; color: rgba(255,255,255,0.75); line-height: 1.6; margin: 0 0 36px;">Book a free ministry assessment call. We'll listen to how your work flows today and show you what a dedicated assistant could carry for you.</p>
+          <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+            <x-import component-from-global-scope="PureWaterAutomationsDesignSystem_9423d9.Button" variant="secondary" size="lg" href="https://team.purewaterautomations.com/discover" target="_blank" hint-size="280px,52px">Book a Free Ministry Assessment</x-import>
+            <a href="https://purewaterautomations.getformly.app/tcndHU" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; height: 52px; padding: 0 28px; border-radius: 9999px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.35); color: #ffffff; font-family: 'DM Sans', system-ui, sans-serif; font-size: 17px; font-weight: 500; letter-spacing: -0.01em; white-space: nowrap; transition: transform 0.24s cubic-bezier(0.34,1.56,0.64,1), background 0.24s ease;" style-hover="background: rgba(255,255,255,0.18); transform: translateY(-1px) scale(1.015); color: #ffffff">Find Your Package in 1 Minute</a>
+          </div>
+          <p style="font-family: 'DM Sans', system-ui, sans-serif; font-size: 13px; color: rgba(255,255,255,0.55); margin: 16px 0 0;">The assessment is a free 15-minute call — no commitment, pressure, or obligation.</p>
+        </div>
+      </div>
+    </section>
+  </sc-if>
+  <footer style="background: #132272; padding: 72px 48px 40px;">
+    <div style="max-width: 1120px; margin: 0 auto;">
+      <div style="display: grid; grid-template-columns: 1.6fr 1fr 1.2fr; gap: 48px; padding-bottom: 56px; border-bottom: 1px solid rgba(255,255,255,0.12);">
+        <div>
+          <img src="../assets/logo/pwa-logo-full-white.png" alt="Pure Water Automations" style="height: 56px; display: block; margin-bottom: 20px;">
+          <p style="font-family: 'DM Sans', system-ui, sans-serif; font-size: 14px; color: rgba(255,255,255,0.6); line-height: 1.7; margin: 0 0 20px; max-width: 340px;">Serving FFWPU pastors, Tribal Messiahs, and community leaders — so you can pour your heart into the providence while we carry the administration.</p>
+          <p style="font-family: 'Outfit', system-ui, sans-serif; font-size: 14px; font-weight: 600; color: #4dc4e8; margin: 0;">Refreshing leaders. Removing burdens. Keeping mission work moving.</p>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <span style="font-family: 'Outfit', system-ui, sans-serif; font-size: 14px; font-weight: 700; color: #ffffff; letter-spacing: 0.02em; margin-bottom: 6px;">Explore</span>
+          <a href="Ministry Home.dc.html" style="font-family: 'DM Sans', system-ui, sans-serif; font-size: 14px; color: rgba(255,255,255,0.6);" style-hover="color: #4dc4e8">Home</a>
+          <a href="Ministry Services.dc.html" style="font-family: 'DM Sans', system-ui, sans-serif; font-size: 14px; color: rgba(255,255,255,0.6);" style-hover="color: #4dc4e8">How We Serve</a>
+          <a href="Ministry Pricing.dc.html" style="font-family: 'DM Sans', system-ui, sans-serif; font-size: 14px; color: rgba(255,255,255,0.6);" style-hover="color: #4dc4e8">Packages</a>
+          <a href="Church Bookkeeping.dc.html" style="font-family: 'DM Sans', system-ui, sans-serif; font-size: 14px; color: rgba(255,255,255,0.6);" style-hover="color: #4dc4e8">Church Bookkeeping</a>
+          <a href="Our Heart.dc.html" style="font-family: 'DM Sans', system-ui, sans-serif; font-size: 14px; color: rgba(255,255,255,0.6);" style-hover="color: #4dc4e8">Our Heart</a>
+          <a href="../Home.dc.html" style="font-family: 'DM Sans', system-ui, sans-serif; font-size: 14px; color: rgba(255,255,255,0.6);" style-hover="color: #4dc4e8">Main PWA Site</a>
+        </div>
+        <div>
+          <span style="display: block; font-family: 'Outfit', system-ui, sans-serif; font-size: 14px; font-weight: 700; color: #ffffff; letter-spacing: 0.02em; margin-bottom: 18px;">Contact</span>
+          <a href="tel:+19083577801" style="display: block; font-family: 'DM Sans', system-ui, sans-serif; font-size: 14px; color: rgba(255,255,255,0.6); margin-bottom: 10px;" style-hover="color: #4dc4e8">+1 (908) 357-7801</a>
+          <a href="mailto:purewaterva58@gmail.com" style="display: block; font-family: 'DM Sans', system-ui, sans-serif; font-size: 14px; color: rgba(255,255,255,0.6); margin-bottom: 24px;" style-hover="color: #4dc4e8">purewaterva58@gmail.com</a>
+          <x-import component-from-global-scope="PureWaterAutomationsDesignSystem_9423d9.Button" variant="secondary" size="sm" href="https://team.purewaterautomations.com/discover" target="_blank" hint-size="200px,34px">Book Your Free Assessment</x-import>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; padding-top: 28px;">
+        <span style="font-family: 'DM Sans', system-ui, sans-serif; font-size: 13px; color: rgba(255,255,255,0.4);">© 2026 Pure Water Automations LLC. All rights reserved.</span>
+        <div style="display: flex; gap: 20px;">
+          <a href="https://www.facebook.com/share/1Ds4DaRfEy/" target="_blank" style="font-family: 'DM Sans', system-ui, sans-serif; font-size: 13px; color: rgba(255,255,255,0.55);" style-hover="color: #4dc4e8">Facebook</a>
+          <a href="https://www.instagram.com/purewaterautomations_llc" target="_blank" style="font-family: 'DM Sans', system-ui, sans-serif; font-size: 13px; color: rgba(255,255,255,0.55);" style-hover="color: #4dc4e8">Instagram</a>
+          <a href="https://www.threads.com/@purewaterautomations_llc" target="_blank" style="font-family: 'DM Sans', system-ui, sans-serif; font-size: 13px; color: rgba(255,255,255,0.55);" style-hover="color: #4dc4e8">Threads</a>
+          <a href="https://www.linkedin.com/in/pure-water-automations-llc" target="_blank" style="font-family: 'DM Sans', system-ui, sans-serif; font-size: 13px; color: rgba(255,255,255,0.55);" style-hover="color: #4dc4e8">LinkedIn</a>
+        </div>
+        <div style="display: flex; gap: 20px;">
+          <a href="../Legal.dc.html#privacy" style="font-family: 'DM Sans', system-ui, sans-serif; font-size: 13px; color: rgba(255,255,255,0.55);" style-hover="color: #4dc4e8">Privacy Policy</a>
+          <a href="../Legal.dc.html#terms" style="font-family: 'DM Sans', system-ui, sans-serif; font-size: 13px; color: rgba(255,255,255,0.55);" style-hover="color: #4dc4e8">Terms &amp; Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showCta&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;}}"></script>
+</body>
+</html>

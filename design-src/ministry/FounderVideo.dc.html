@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="../_ds/pure-water-automations-design-system-9423d907-3e04-4ebc-a762-f06a16c0ec50/tokens/fonts.css">
+  <link rel="stylesheet" href="../_ds/pure-water-automations-design-system-9423d907-3e04-4ebc-a762-f06a16c0ec50/tokens/base.css">
+  <link rel="stylesheet" href="../_ds/pure-water-automations-design-system-9423d907-3e04-4ebc-a762-f06a16c0ec50/tokens/colors.css">
+  <link rel="stylesheet" href="../_ds/pure-water-automations-design-system-9423d907-3e04-4ebc-a762-f06a16c0ec50/tokens/typography.css">
+  <link rel="stylesheet" href="../_ds/pure-water-automations-design-system-9423d907-3e04-4ebc-a762-f06a16c0ec50/styles.css">
+  <script src="../_ds/pure-water-automations-design-system-9423d907-3e04-4ebc-a762-f06a16c0ec50/_ds_bundle.js"></script>
+</helmet>
+<div style="max-width: 1120px; margin: 0 auto;">
+  <div style="background: #ffffff; border: 1px solid #d2d2d7; border-radius: 28px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); overflow: hidden; display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);">
+    <div style="position: relative; min-height: 340px; height: 100%; background: #132272;">
+      <sc-if value="{{ hasVideo }}" hint-placeholder-val="{{ false }}">
+        <iframe src="{{ embedUrl }}" title="Founder video" style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen="{{ true }}"></iframe>
+      </sc-if>
+      <sc-if value="{{ noVideo }}" hint-placeholder-val="{{ true }}">
+        <div style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; padding: 32px; text-align: center; background: radial-gradient(circle at 70% 20%, rgba(77,196,232,0.25) 0%, transparent 60%), #132272;">
+          <div style="width: 72px; height: 72px; border-radius: 50%; border: 2px solid rgba(77,196,232,0.6); display: flex; align-items: center; justify-content: center;">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="#4dc4e8"><path d="M8 5v14l11-7z"></path></svg>
+          </div>
+          <div style="font-family: 'Outfit', system-ui, sans-serif; font-size: 18px; font-weight: 700; color: #ffffff;">Founder video coming soon</div>
+          <span style="display: inline-flex; border: 2px dashed #ffb340; background: #fff8ec; border-radius: 10px; padding: 6px 12px; font-family: 'DM Sans', system-ui, sans-serif; font-size: 12px; font-weight: 700; color: #8a5a00; max-width: 340px; line-height: 1.5;">TO FILL IN — film, upload to YouTube, then paste the video ID into Tweaks</span>
+        </div>
+      </sc-if>
+    </div>
+    <div style="padding: 44px 48px; display: flex; flex-direction: column; justify-content: center;">
+      <span style="align-self: flex-start; display: inline-flex; background: #e7f8fd; color: #157ba0; border: 1px solid #c4eef9; border-radius: 8px; padding: 4px 12px; font-family: 'DM Sans', system-ui, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 18px;">{{ eyebrow }}</span>
+      <h2 style="font-family: 'Outfit', system-ui, sans-serif; font-size: clamp(26px, 2.8vw, 34px); font-weight: 700; letter-spacing: -0.025em; color: #132272; line-height: 1.15; margin: 0 0 18px;">{{ heading }}</h2>
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="#4dc4e8" style="margin-bottom: 10px;"><path d="M9.6 4C6 6 3.5 9.4 3.5 13.6c0 3.2 2 5.4 4.7 5.4 2.4 0 4.2-1.8 4.2-4.1 0-2.2-1.6-3.9-3.8-3.9-.4 0-.9.1-1 .1.3-2.1 2.2-4.6 4.1-5.7L9.6 4zm10.4 0c-3.6 2-6.1 5.4-6.1 9.6 0 3.2 2 5.4 4.7 5.4 2.3 0 4.2-1.8 4.2-4.1 0-2.2-1.7-3.9-3.9-3.9-.4 0-.8.1-1 .1.4-2.1 2.3-4.6 4.2-5.7L20 4z"></path></svg>
+      <p style="font-family: 'DM Sans', system-ui, sans-serif; font-size: 16px; font-style: italic; color: #48484a; line-height: 1.7; margin: 0 0 16px;">{{ quote }}</p>
+      <sc-if value="{{ noVideo }}" hint-placeholder-val="{{ false }}">
+        <span style="align-self: flex-start; display: inline-flex; border: 2px dashed #ffb340; background: #fff8ec; border-radius: 10px; padding: 6px 12px; font-family: 'DM Sans', system-ui, sans-serif; font-size: 12px; font-weight: 700; color: #8a5a00; margin-bottom: 16px;">TO FILL IN — replace with a real quote from the video</span>
+      </sc-if>
+      <div style="font-family: 'Outfit', system-ui, sans-serif; font-size: 16px; font-weight: 700; color: #132272;">{{ founderName }}</div>
+      <div style="font-family: 'DM Sans', system-ui, sans-serif; font-size: 14px; color: #6e6e73; margin-top: 2px;">{{ founderRole }}</div>
+    </div>
+  </div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;: {&quot;width&quot;: 1200, &quot;height&quot;: 500}, &quot;youtubeId&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;&quot;, &quot;tsType&quot;: &quot;string&quot;}, &quot;quote&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;Founder quote goes here — one or two sentences from the video, in our own words.&quot;, &quot;tsType&quot;: &quot;string&quot;}, &quot;eyebrow&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;From Our Founders&quot;, &quot;tsType&quot;: &quot;string&quot;}, &quot;heading&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;Why We Started Pure Water&quot;, &quot;tsType&quot;: &quot;string&quot;}, &quot;founderName&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;Justin Okamoto &amp; Eunmi Rangala-Maddox&quot;, &quot;tsType&quot;: &quot;string&quot;}, &quot;founderRole&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;Co-founders, Pure Water Automations&quot;, &quot;tsType&quot;: &quot;string&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const id = (this.props.youtubeId ?? '').trim();
+    return {
+      hasVideo: !!id,
+      noVideo: !id,
+      embedUrl: 'https://www.youtube-nocookie.com/embed/' + id,
+      eyebrow: this.props.eyebrow ?? 'From Our Founders',
+      heading: this.props.heading ?? 'Why We Started Pure Water',
+      quote: this.props.quote ?? 'Founder quote goes here — one or two sentences from the video, in our own words.',
+      founderName: this.props.founderName ?? 'Justin Okamoto & Eunmi Rangala-Maddox',
+      founderRole: this.props.founderRole ?? 'Co-founders, Pure Water Automations',
+    };
+  }
+}
+</script>
+</body>
+</html>

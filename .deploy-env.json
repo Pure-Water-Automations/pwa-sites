@@ -1,0 +1,12 @@
+{
+  "app": "pwa-sites",
+  "dev": null,
+  "prod": {
+    "domain": "ministry.purewaterautomations.com + nonprofits.purewaterautomations.com",
+    "box": "hostinger-vps (2.24.121.26)",
+    "branch": "main",
+    "port": 8811,
+    "service": "pwa-sites.service",
+    "dir": "/opt/pwa-sites/current"
+  }
+}
