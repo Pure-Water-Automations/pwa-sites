@@ -147,6 +147,17 @@ h1, h2, h3 { font-family: var(--font-display, 'Outfit', system-ui, sans-serif); 
 .grid { display: grid; gap: 20px; }
 .grid--2 { grid-template-columns: repeat(2, 1fr); }
 .grid--3 { grid-template-columns: repeat(3, 1fr); }
+.services-grid {
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.services-grid .card {
+  grid-column: span 4;
+}
+
+.services-grid .card:nth-child(n + 4) {
+  grid-column: span 3;
+}
 .grid--4 { grid-template-columns: repeat(4, 1fr); gap: 16px; }
 .grid--5 { grid-template-columns: repeat(5, 1fr); gap: 16px; }
 
@@ -267,6 +278,11 @@ h1, h2, h3 { font-family: var(--font-display, 'Outfit', system-ui, sans-serif); 
 
 /* ── Steps ────────────────────────────────────────────────────────── */
 .step { background: var(--color-neutral-50); border-radius: 24px; padding: 28px; }
+.step--white {
+  background: var(--color-neutral-0);
+  border: 1px solid var(--color-neutral-200);
+  box-shadow: 0 4px 16px rgba(19, 34, 114, 0.06);
+}
 .step-num { font-family: var(--font-display); font-size: 44px; font-weight: 800; letter-spacing: -0.04em; color: var(--color-sky-700); line-height: 1; margin-bottom: 14px; }
 .step h3 { font-size: 17px; font-weight: 600; margin: 0 0 8px; }
 .step p { font-family: var(--font-sans); font-size: 14px; color: var(--color-neutral-600); line-height: 1.65; margin: 0; }
@@ -277,6 +293,31 @@ h1, h2, h3 { font-family: var(--font-display, 'Outfit', system-ui, sans-serif); 
 .faq-q { font-family: var(--font-display); font-size: 17px; font-weight: 600; color: var(--color-navy-900); margin: 0 0 10px; }
 .faq-a { font-family: var(--font-sans); font-size: 14px; color: var(--color-neutral-700); line-height: 1.75; margin: 0 0 10px; }
 .faq-a:last-child { margin-bottom: 0; }
+.faq-item > summary {
+  list-style: none;
+  cursor: pointer;
+  position: relative;
+  padding-right: 32px;
+}
+
+.faq-item > summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item > summary::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--color-sky-700);
+}
+
+.faq-item[open] > summary::after {
+  content: "−";
+}
 
 /* ── Values / team ────────────────────────────────────────────────── */
 .value-tile { background: var(--color-neutral-50); border-radius: 20px; padding: 28px 22px; text-align: center; }
@@ -299,7 +340,7 @@ h1, h2, h3 { font-family: var(--font-display, 'Outfit', system-ui, sans-serif); 
 
 .quote-box {
   background: var(--color-sky-50); border: 1px solid var(--color-sky-100); border-radius: 24px;
-  padding: 44px 48px; text-align: center;
+  padding: 24px 28px; text-align: center;
 }
 .quote-box h2 { font-size: 26px; font-weight: 700; letter-spacing: -0.02em; margin: 0 0 14px; }
 .quote-box p { font-family: var(--font-sans); font-size: 15px; color: var(--color-neutral-700); line-height: 1.75; margin: 0 0 24px; }
@@ -369,6 +410,10 @@ h1, h2, h3 { font-family: var(--font-display, 'Outfit', system-ui, sans-serif); 
 .footer-contact .footer-heading { display: block; margin-bottom: 18px; }
 .footer-contact > a { display: block; margin-bottom: 10px; }
 .footer-contact > a:last-of-type { margin-bottom: 24px; }
+.footer-contact .btn {
+  display: inline-flex;
+  width: fit-content;
+}
 .footer-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; padding-top: 28px; }
 .footer-copy { font-family: var(--font-sans); font-size: 13px; color: rgba(255, 255, 255, 0.6); }
 .footer-social, .footer-legal { display: flex; gap: 20px; }
@@ -399,6 +444,13 @@ html.js .reveal.is-visible { opacity: 1; transform: none; }
   .nav-menu > .btn { margin-top: 8px; }
 
   .grid--3, .grid--4 { grid-template-columns: repeat(2, 1fr); }
+  .services-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.services-grid .card {
+  grid-column: span 1;
+}
   .grid--5 { grid-template-columns: repeat(2, 1fr); }
   .feature-split, .feature-split--hero { grid-template-columns: 1fr; gap: 48px; }
   .founder-card { grid-template-columns: 1fr; }
@@ -417,6 +469,13 @@ html.js .reveal.is-visible { opacity: 1; transform: none; }
   .footer { padding: 56px 20px 32px; }
 
   .grid--2, .grid--3, .grid--4, .grid--5 { grid-template-columns: 1fr; }
+  .services-grid {
+  grid-template-columns: 1fr;
+}
+
+.services-grid .card {
+  grid-column: span 1;
+}
   .model-table, .model-table thead, .model-table tbody, .model-row, .model-head, .model-cell { display: block; }
   .model-head--local { width: auto; border-bottom: 0; }
   .model-cell { border-bottom: 0; }
