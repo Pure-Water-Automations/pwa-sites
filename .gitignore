@@ -1,3 +1,6 @@
 data/
 .DS_Store
 node_modules/
+project-docs/
+CLAUDE.md
+PWA_WEB_REDESIGN_PROJECT_PLAN.txt
