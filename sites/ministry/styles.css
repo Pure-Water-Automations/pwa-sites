@@ -245,6 +245,7 @@ h1, h2, h3 { font-family: var(--font-display, 'Outfit', system-ui, sans-serif); 
 .client-testimonial--reverse .client-testimonial__image { grid-column: 2; grid-row: 1; }
 .client-testimonial--reverse .client-testimonial__content { grid-column: 1; grid-row: 1; }
 .client-testimonial__image { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 16px; }
+.client-testimonial__image--top { object-position: center top; }
 .client-testimonial--reverse .client-testimonial__content { align-self: start; }
 .client-testimonial__content { min-width: 0; }
 .client-testimonial__quote { margin: 0 0 20px; }
@@ -634,7 +635,7 @@ html.js .reveal.is-visible { opacity: 1; transform: none; }
   .founder-body { padding: 32px 24px; }
   .client-testimonial, .client-testimonial--reverse { grid-template-columns: minmax(0, 1fr); gap: 20px; padding: 20px; }
   .client-testimonial--reverse .client-testimonial__image, .client-testimonial--reverse .client-testimonial__content { grid-column: 1; grid-row: auto; }
-  .client-testimonial__image { aspect-ratio: 16 / 9; }
+  .client-testimonial__image { aspect-ratio: 4 / 3; }
   .cta-band { padding: 48px 24px; }
   .quote-box { padding: 32px 24px; }
   .info-bar { padding: 20px 24px; }
